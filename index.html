@@ -200,6 +200,46 @@
       overflow: hidden;
     }
 
+    .hero-avatar {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--green);
+  box-shadow: 0 0 20px var(--green-glow), inset 0 0 20px var(--green-glow);
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(100%) contrast(1.1) brightness(0.85) sepia(20%) hue-rotate(80deg);
+  display: block;
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,255,65,0.04) 0px,
+    rgba(0,255,65,0.04) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+.avatar-label {
+  position: absolute;
+  bottom: -1.4rem;
+  left: 0;
+  font-size: 0.65rem;
+  color: var(--green-dim);
+  letter-spacing: 2px;
+}
+
     .btn::before {
       content: '';
       position: absolute;
@@ -594,6 +634,12 @@
       <p class="hero-prefix">// INITIALIZING PORTFOLIO.EXE</p>
       <h1 class="hero-name">John Rafael A. Manabat<span class="blink">_</span></h1>
       <p class="hero-title">DevSecOps Engineer &nbsp;|&nbsp; Security-First Mindset</p>
+
+      <div class="hero-avatar">
+  <img src="my-photo.jpg" alt="John Rafael A. Manabat" />
+  <div class="avatar-overlay"></div>
+  <div class="avatar-label">// ID_VERIFIED</div>
+</div>
 
       <div class="hero-bio">
         <p>
