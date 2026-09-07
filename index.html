@@ -75,11 +75,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 8px;
   }
   .nav-name {
     color: var(--paper);
     font-size: 0.95rem;
     font-weight: 500;
+    white-space: nowrap;
   }
   .nav-name .mono { color: var(--linework); font-size: 0.82rem; }
   nav.links {
@@ -93,6 +96,15 @@
     border-bottom-color: transparent;
   }
   nav.links a:hover { color: var(--paper); border-bottom-color: var(--paper); }
+
+  @media (max-width: 720px) {
+    .nav-name {
+      flex: 1 1 100%;
+      white-space: normal;
+      font-size: 0.85rem;
+    }
+    .nav-name .mono { font-size: 0.74rem; }
+  }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -316,7 +328,7 @@
 
 <header class="site-nav">
   <div class="nav-inner">
-    <div class="nav-name"><span class="mono">DevOps Engineer | DevSecOps Engineer | Infrastructure Security Engineer </span></div>
+    <div class="nav-name"><span class="mono">DevOps, DevSecOps &amp; Infrastructure Security Engineer</span></div>
     <nav class="links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -345,6 +357,7 @@
         <span>0976-387-8788</span>
         <a href="mailto:jramanabat@gmail.com">jramanabat@gmail.com</a>
         <a href="https://www.linkedin.com/in/john-rafael-manabat/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="John-Rafael-Manabat.pdf" target="_blank">Résumé (PDF)</a>
       </div>
     </div>
   </div>
@@ -447,8 +460,7 @@
           <span>Bandit</span>
         </div>
         <div class="video-slot">
-          <a href="Recorded video is not yet ready" target="_blank" rel="noopener">Live demonstration during interview, possible!</a>
-          <span></span>
+          Video walkthrough coming soon — happy to walk through it live in an interview
         </div>
         <div class="project-links">
           <a href="#">Source code</a>
@@ -525,9 +537,10 @@
       <a href="mailto:jramanabat@gmail.com">jramanabat@gmail.com</a>
       <span>0976-387-8788</span>
       <a href="https://www.linkedin.com/in/john-rafael-manabat/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="resume.pdf" target="_blank">Résumé (PDF)</a>
       <span>Nueva Ecija, Philippines</span>
     </div>
-    <div class="fine mono">built by hand, no template</div>
+    <div class="fine mono"></div>
   </div>
 </footer>
 
